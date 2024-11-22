@@ -1,6 +1,12 @@
 import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
+import one from "./1.avif";
+import two from "./2.avif";
+import liquina from "./liquina.png";
+import four from "./4.avif";
+import five from "./5.avif";
+import six from "./6.avif";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
@@ -59,4 +65,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  one,
+  two,
+  four,
+  five,
+  six,liquina,
 };

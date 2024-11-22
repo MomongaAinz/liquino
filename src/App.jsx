@@ -14,11 +14,7 @@ function App() {
         <Hero/>
       </div>
       <About/>
-      <ExperienceT/>
-      <Experience/>
       <Tech/>
-      <Works/>
-      <DownloadCV/>
       <div className="relative z-0">
         <Contact/>
       </div>

@@ -1,54 +1,104 @@
-import {motion} from 'framer-motion';
-
-import {styles } from '../styles';
-import { ComputersCanvas } from './canvas'; 
+import { motion } from 'framer-motion';
+import liquinaImage from '../assets/liquina.png';
 
 const Hero = () => {
   return (
-    <section className='relative w-full h-screen mx-auto'>
-
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex row items-start
-      gap-5`}>
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915eff]'/>
-          <div className='w-1 sm:h-80 h-40 violet-gradient'/>
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
+      <div className="absolute inset-0 top-[120px] max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-row items-start gap-5">
+        <div className="flex flex-col justify-center items-center mt-5">
+          <div className="w-5 h-5 rounded-full bg-[#915eff]" />
+          <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#915eff] to-transparent" />
         </div>
         <div>
-          <h1 className={styles.heroHeadText}>Hello <span className='text-[#915eff]'>
-            world
-            </span>
-            </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>Sami Sikanou<br className='sm:block hidden'/> Développeur Web et Mobile</p>
+          <h1 className="text-5xl lg:text-7xl font-bold text-white">
+            Hello <span className="text-[#915eff]">world</span>
+          </h1>
+          <p className="text-lg lg:text-2xl text-secondary mt-2">
+            Momonga Ainz<br className="sm:block hidden" /> Développeur Web et Mobile
+          </p>
         </div>
       </div>
-      <ComputersCanvas/>
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center 
-          items-start p-2'>
-            <motion.dev
-            animate={{ 
-              y: [0,24,0] 
-              }}
+      <div className="relative flex justify-center items-center w-full h-full">
+        <motion.div
+          className="absolute rounded-full bg-[#ffffff] opacity-80"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.8, 1, 0.8],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            repeatType: 'mirror',
+            ease: 'easeInOut',
+          }}
+          style={{
+            width: '400px',
+            height: '400px',
+            filter: 'blur(100px)',
+            boxShadow: '0 0 80px 40px rgba(145,94,255,0.7)',
+            zIndex: 1,
+          }}
+        />
+
+        <motion.div
+          className="absolute rounded-full bg-[#915eff] opacity-80"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.8, 1, 0.8],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: 'mirror',
+            ease: 'easeInOut',
+          }}
+          style={{
+            width: '400px',
+            height: '400px',
+            filter: 'blur(100px)',
+            boxShadow: '0 0 500px 200px rgba(145,94,255,0.7)',
+            zIndex: 1,
+          }}
+        />
+
+        <motion.img
+          src={liquinaImage}
+          alt="liquina"
+          className="absolute object-contain w-auto h-auto max-w-full max-h-full"
+          animate={{
+            scale: [1, 1.05, 1],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: 'mirror',
+            ease: 'easeInOut',
+          }}
+          style={{
+            filter: 'blur(0.5px)',
+            zIndex: 2,
+          }}
+        />
+      </div>
+
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+        <a href="#about">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-[#915eff] flex justify-center items-start p-2">
+            <motion.div
+              animate={{ y: [0, 24, 0] }}
               transition={{
-                duration:1.5,
+                duration: 1.5,
                 repeat: Infinity,
                 repeatType: 'loop',
-  
-            }}
-            className="w-3 h-3 rounded-full bg-secondary mb-1"
-            >
-
-            </motion.dev>
-
+              }}
+              className="w-3 h-3 rounded-full bg-[#915eff] mb-1"
+            />
           </div>
-
         </a>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
