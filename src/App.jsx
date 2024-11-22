@@ -43,9 +43,6 @@ function App() {
         <Marquee text="$PIRATE"/>
 
         {/* Contact section */}
-        <div className="rounded-3xl overflow-hidden bg-primary mx-4 my-6">
-          <Contact />
-        </div>
       </div>
     </BrowserRouter>
   );
