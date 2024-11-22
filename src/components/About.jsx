@@ -22,7 +22,7 @@ const ServiceCard = ({index,title,icon}) => {
 const About = () => {
   return (
     <>
-      <motion.div>
+      {/* <motion.div>
         <h2 className={styles.sectionHeadText}
         >Pirate Takeover </h2>
       </motion.div>
@@ -39,7 +39,7 @@ const About = () => {
           <br/><br/>
           - liquina, The queen of Hyperliquid
         
-      </motion.p>
+      </motion.p> */}
 
       
 

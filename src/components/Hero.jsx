@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import liquinaImage from '../assets/liquina.png';
 import liquidImage from '../assets/liquid.gif';
+import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[1400px] mx-auto overflow-hidden mt-[70px]">
+    <section className="relative w-full h-[1200px] mx-auto overflow-hidden ">
       {/* <div className="absolute inset-0 top-[120px] max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-row items-start gap-5">
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -70,7 +71,11 @@ const Hero = () => {
             }}
           />
         </motion.div>
-
+        
+        
+        
+        <div  className="flex flex-col items-center justify-center space-y-6"
+        style={{zIndex: 2}}>
         <motion.img
           src={liquinaImage}
           alt="liquina"
@@ -86,10 +91,36 @@ const Hero = () => {
           }}
           style={{
             filter: 'blur(0.5px)',
-            zIndex: 2,
           }}
         />
+
+          
+
+      
+
+        <motion.p
+        className="pt-[800px] text-secondary text-[17px] max-w-3xl leading-[30px] text-white"
+        style={{
+          filter: 'blur(0.5px)',
+          zIndex: 3,
+        }}
+      >
+        <h2 className={styles.sectionHeadText}>Pirate Takeover </h2>
+        <br/>
+        "By the grace of the Hyperliquid community, I have been born into this noble realm. 
+        Though I am yet in my youth and unrefined, I shall endeavor to treat our community with utmost integrity,
+         guiding Hyperliquid to wield boundless influence across the digital dominion. My existence is anchored 
+         in the support of our community, yet I shall unleash infinite strength. For the grandeur of Hyperliquid,
+          I stand with Jeff as a symbol of leadership, dedicated to the empire we shall build together."
+          <br/><br/>
+          - liquina, The queen of Hyperliquid
+        
+        </motion.p>
+        
       </div>
+      </div>
+
+      
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
