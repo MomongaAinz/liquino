@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import liquinaImage from '../assets/liquina.png';
+import liquidImage from '../assets/liquid.gif';
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto overflow-hidden">
-      <div className="absolute inset-0 top-[120px] max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-row items-start gap-5">
+    <section className="relative w-full h-[1400px] mx-auto overflow-hidden mt-[70px]">
+      {/* <div className="absolute inset-0 top-[120px] max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-row items-start gap-5">
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-[#915eff] to-transparent" />
@@ -17,7 +18,7 @@ const Hero = () => {
             Momonga Ainz<br className="sm:block hidden" /> Développeur Web et Mobile
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="relative flex justify-center items-center w-full h-full">
         <motion.div
@@ -36,13 +37,13 @@ const Hero = () => {
             width: '400px',
             height: '400px',
             filter: 'blur(100px)',
-            boxShadow: '0 0 80px 40px rgba(145,94,255,0.7)',
+            boxShadow: '0 0 500px 200px rgba(150, 252, 229,0.7)',
             zIndex: 1,
           }}
         />
 
         <motion.div
-          className="absolute rounded-full bg-[#915eff] opacity-80"
+          className="absolute rounded-full opacity-80"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.8, 1, 0.8],
@@ -54,13 +55,21 @@ const Hero = () => {
             ease: 'easeInOut',
           }}
           style={{
-            width: '400px',
-            height: '400px',
-            filter: 'blur(100px)',
-            boxShadow: '0 0 500px 200px rgba(145,94,255,0.7)',
+            width: '1200px',
+            height: '1200px',
+            filter: 'blur(30px)',
             zIndex: 1,
           }}
-        />
+        >
+          <img
+            src={liquidImage}
+            alt="liquid gif"
+            className="w-full h-full rounded-full object-cover"
+            style={{
+              filter: 'blur(10px)',
+            }}
+          />
+        </motion.div>
 
         <motion.img
           src={liquinaImage}
